@@ -3,7 +3,7 @@
 import { spawn } from "node:child_process";
 import { createInterface } from "node:readline/promises";
 
-const API = process.env.SKILLHUB_API ?? "https://skill-hub-teal.vercel.app/api/skills.json";
+const API = process.env.SKILLHUB_API || "https://skill-hub-teal.vercel.app/api/skills.json";
 
 const HELP = `skillhub: search and install AI skills
 

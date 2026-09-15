@@ -1,14 +1,15 @@
 // Single source of truth for site-wide settings. Rename the site here.
 
 function resolveSiteUrl(): string {
-  const explicit = process.env.NEXT_PUBLIC_SITE_URL;
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
   if (explicit) return explicit.replace(/\/$/, "");
   const vercel = process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL;
   if (vercel) return `https://${vercel}`;
   return "http://localhost:3000";
 }
 
-const repo = process.env.NEXT_PUBLIC_GITHUB_REPO ?? "soruslyaiapp-hub/skill-hub";
+// Empty values count as unset: Vercel keeps variables that were added with no value.
+const repo = process.env.NEXT_PUBLIC_GITHUB_REPO?.trim() || "soruslyaiapp-hub/skill-hub";
 
 export const site = {
   name: "SkillHub",
