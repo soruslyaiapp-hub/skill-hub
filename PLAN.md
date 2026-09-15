@@ -3,7 +3,7 @@
 > An open, searchable directory of AI skills, agents, MCP servers and prompts.
 > Think "Hugging Face, but for skills instead of models."
 
-- **Status:** Built — phases 0 to 6 done. Waiting on Ahmed: name and domain, GitHub push, Vercel deploy, optional Supabase.
+- **Status:** Built — phases 0 to 6 done. Live on GitHub. Waiting on Ahmed: Vercel sign-in and deploy, name and domain, optional Supabase.
 - **Owner:** Ahmed
 - **Created:** 2026-09-02
 - **Last updated:** 2026-09-15
@@ -227,7 +227,7 @@ Each phase ends with something you can show people.
 - [x] Working name: **SkillHub** (rename in one place: `src/lib/site.ts`)
 - [ ] Buy the domain (see D1)
 - [x] `git init` and MIT licence
-- [ ] Push to GitHub — needs Ahmed's OK (it makes a public repo)
+- [x] Pushed to https://github.com/mansoorahmed084/skill-hub (public). CI passes.
 - [x] `create-next-app`: Next.js 16.3, React 19.2, TypeScript, Tailwind v4
 - [x] Add shadcn/ui (Base UI flavour), Lucide, Zod, Vitest
 - [ ] Connect the repo to Vercel, confirm the first deploy — needs Ahmed's OK
@@ -411,3 +411,4 @@ Check the trademark and the domain before you commit to a name.
 | 2026-09-15 | 4 | OG images, sitemap, robots, JSON-LD, 404, skeletons, analytics hook, LinkedIn share. Lighthouse 100 on accessibility, best practices and SEO. |
 | 2026-09-15 | 5 | Submit form to PR, about page, CI, nightly stats, weekly link check, CONTRIBUTING, templates, full README. All 92 links OK. |
 | 2026-09-15 | 6 | JSON API, RSS, collections, skill of the week, compare, bookmarks, newsletter, upvotes (off), CLI, digest and LinkedIn scripts. 63+ tests. |
+| 2026-09-15 | Launch | Repo created and pushed to GitHub; CI green. Vercel needs Ahmed to sign in and press Deploy. |
