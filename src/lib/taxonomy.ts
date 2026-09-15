@@ -80,7 +80,7 @@ export const CATEGORIES: Record<CategoryKey, CategoryMeta> = {
     key: "devops",
     name: "DevOps & Infra",
     short: "DevOps",
-    description: "Cloud, infrastructure as code, Kubernetes and monitoring.",
+    description: "Cloud, model serving and training, infrastructure as code, Kubernetes and monitoring.",
     hue: 235,
   },
   security: {

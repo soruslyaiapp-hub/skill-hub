@@ -1,6 +1,6 @@
 // Filter vocabularies other than categories. Pure data, shared by site, scripts and tests.
 
-export const TYPE_KEYS = ["skill", "mcp", "agent", "prompt", "workflow", "hook", "plugin", "tool"] as const;
+export const TYPE_KEYS = ["skill", "mcp", "agent", "prompt", "workflow", "hook", "plugin", "tool", "model", "resource"] as const;
 export type SkillTypeKey = (typeof TYPE_KEYS)[number];
 export const SKILL_TYPES: Record<SkillTypeKey, { name: string; description: string }> = {
   skill: { name: "Skill", description: "A skill folder with a SKILL.md file." },
@@ -11,6 +11,8 @@ export const SKILL_TYPES: Record<SkillTypeKey, { name: string; description: stri
   hook: { name: "Hook", description: "An automation that runs on agent events." },
   plugin: { name: "Plugin", description: "A bundle of skills, agents, commands and hooks." },
   tool: { name: "Tool / CLI", description: "A CLI, library or app that you use with an agent." },
+  model: { name: "Model", description: "An open model, with code to run or fine-tune it." },
+  resource: { name: "Learning resource", description: "A book, course or guided project." },
 };
 
 export const PLATFORM_KEYS = ["claude-code", "claude-ai", "codex", "cursor", "vscode", "windsurf", "chatgpt", "any"] as const;

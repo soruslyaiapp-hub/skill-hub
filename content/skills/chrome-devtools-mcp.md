@@ -16,6 +16,9 @@ author:
 links:
   source: https://github.com/ChromeDevTools/chrome-devtools-mcp
   install: claude mcp add chrome-devtools npx chrome-devtools-mcp@latest
+origin:
+  linkedinUrl: https://www.linkedin.com/feed/update/urn:li:share:7501610032850190337/
+  postedAt: 2026-09-04
 metrics:
   githubStars: 52014
   lastCommit: 2026-09-15

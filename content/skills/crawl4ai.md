@@ -16,6 +16,9 @@ author:
 links:
   source: https://github.com/unclecode/crawl4ai
   install: pip install -U crawl4ai
+origin:
+  linkedinUrl: https://www.linkedin.com/feed/update/urn:li:share:7502697197587607552/
+  postedAt: 2026-09-07
 metrics:
   githubStars: 83521
   lastCommit: 2026-09-14

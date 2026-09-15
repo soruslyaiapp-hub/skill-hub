@@ -3,7 +3,7 @@
 > An open, searchable directory of AI skills, agents, MCP servers and prompts.
 > Think "Hugging Face, but for skills instead of models."
 
-- **Status:** Built — phases 0 to 6 done. Live on GitHub. Waiting on Ahmed: Vercel sign-in and deploy, name and domain, optional Supabase.
+- **Status:** Live at https://skill-hub-teal.vercel.app with 90 skills. Waiting on Ahmed: mark tested skills verified, optional custom domain and Supabase.
 - **Owner:** Ahmed
 - **Created:** 2026-09-02
 - **Last updated:** 2026-09-15
@@ -55,6 +55,8 @@ A **skill** is any packaged, reusable AI capability. It can be:
 | `hook` | An automation hook |
 | `plugin` | A bundle of the above |
 | `tool` | A CLI, library or app used with an agent (RTK, Repomix) |
+| `model` | An open model with code to run or fine-tune it (LTX-2, TimesFM) |
+| `resource` | A book, course or guided project (AI Agent in Depth, MiniMind) |
 
 ---
 
@@ -86,7 +88,7 @@ Rule: if a skill fits two categories, pick the **job it does**, not the tool it 
 These are separate filters, not categories:
 
 - **Platform:** Claude Code / Claude.ai / Codex / Cursor / VS Code / Windsurf / ChatGPT / Any
-- **Type:** skill / mcp / agent / prompt / workflow / hook / plugin / tool
+- **Type:** skill / mcp / agent / prompt / workflow / hook / plugin / tool / model / resource
 - **Difficulty:** Beginner / Intermediate / Advanced
 - **Price:** Free / Freemium / Paid
 - **Status:** Verified / Community / Experimental / Deprecated
@@ -263,7 +265,8 @@ Each phase ends with something you can show people.
 - [x] `npm run import -- file.yaml` for bulk adds, and `npm run sync:github` to refresh stars, last commit, licence and archived state
 - [x] Write a short, honest body for each one, not marketing copy (what it does, why, how, watch out for)
 - [x] Covers: generated from the category colour and icon, so no image files are needed (real screenshots go in `media.screenshots`)
-- [ ] Swap in Ahmed's own LinkedIn picks, add `origin.linkedinUrl`, and mark tested ones `status: verified`
+- [x] Add Ahmed's LinkedIn picks with `origin.linkedinUrl`: 46 posted GitHub projects, taken from the AutomatedPosting records
+- [ ] Mark tested ones `status: verified` (Ahmed)
 
 **Done when:** every category has at least 2 skills. This is the launch bar.
 
@@ -412,4 +415,5 @@ Check the trademark and the domain before you commit to a name.
 | 2026-09-15 | 4 | OG images, sitemap, robots, JSON-LD, 404, skeletons, analytics hook, LinkedIn share. Lighthouse 100 on accessibility, best practices and SEO. |
 | 2026-09-15 | 5 | Submit form to PR, about page, CI, nightly stats, weekly link check, CONTRIBUTING, templates, full README. All 92 links OK. |
 | 2026-09-15 | 6 | JSON API, RSS, collections, skill of the week, compare, bookmarks, newsletter, upvotes (off), CLI, digest and LinkedIn scripts. 63+ tests. |
-| 2026-09-15 | Launch | Repo created and pushed to GitHub; CI green. Vercel needs Ahmed to sign in and press Deploy. |
+| 2026-09-15 | Launch | Repo pushed to GitHub (now soruslyaiapp-hub/skill-hub); CI green; deployed on Vercel at https://skill-hub-teal.vercel.app. |
+| 2026-09-15 | Content | Added 43 skills from Ahmed's LinkedIn posts and linked 3 existing ones (46 in total point to their post). New types: Model and Learning resource. 90 skills. AI-news posts were left out. |
