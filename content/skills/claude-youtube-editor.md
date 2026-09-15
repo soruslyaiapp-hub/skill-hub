@@ -23,6 +23,7 @@ metrics:
   archived: false
 addedAt: 2026-09-15
 updatedAt: 2026-09-15
+featured: false
 ---
 
 ## What it does

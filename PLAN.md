@@ -3,7 +3,7 @@
 > An open, searchable directory of AI skills, agents, MCP servers and prompts.
 > Think "Hugging Face, but for skills instead of models."
 
-- **Status:** In progress — Phase 2 done
+- **Status:** In progress — Phase 3 done
 - **Owner:** Ahmed
 - **Created:** 2026-09-02
 - **Last updated:** 2026-09-15
@@ -258,9 +258,11 @@ Each phase ends with something you can show people.
 
 ### Phase 3 — Content push (2 days, in parallel)
 
-- [ ] Backfill 30 to 50 skills from your LinkedIn history
-- [ ] Write a short, honest body for each one, not marketing copy
-- [ ] Add a cover image for each
+- [x] Backfill to 47 skills, each checked against its GitHub repo and README
+- [x] `npm run import -- file.yaml` for bulk adds, and `npm run sync:github` to refresh stars, last commit, licence and archived state
+- [x] Write a short, honest body for each one, not marketing copy (what it does, why, how, watch out for)
+- [x] Covers: generated from the category colour and icon, so no image files are needed (real screenshots go in `media.screenshots`)
+- [ ] Swap in Ahmed's own LinkedIn picks, add `origin.linkedinUrl`, and mark tested ones `status: verified`
 
 **Done when:** every category has at least 2 skills. This is the launch bar.
 
@@ -399,3 +401,4 @@ Check the trademark and the domain before you commit to a name.
 | 2026-09-15 | 0 | Repo created. Next.js 16 + Tailwind v4 + shadcn/ui scaffold builds. Push and deploy wait for Ahmed. |
 | 2026-09-15 | 1 | Content model: schema, loader, validator, generator, 5 seeds, unit tests. Switched MDX to plain Markdown for PR safety. |
 | 2026-09-15 | 2 | MVP site: home, browse with search + filters in the URL, detail, category and tag pages. All pages are static. |
+| 2026-09-15 | 3 | 47 real skills across all 12 categories. GitHub stats filled by the new sync script. |
