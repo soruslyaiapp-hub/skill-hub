@@ -3,7 +3,7 @@
 > An open, searchable directory of AI skills, agents, MCP servers and prompts.
 > Think "Hugging Face, but for skills instead of models."
 
-- **Status:** In progress — Phase 1 done
+- **Status:** In progress — Phase 2 done
 - **Owner:** Ahmed
 - **Created:** 2026-09-02
 - **Last updated:** 2026-09-15
@@ -246,13 +246,13 @@ Each phase ends with something you can show people.
 
 ### Phase 2 — MVP site (3 days)
 
-- [ ] Skill card component
-- [ ] `/skills` browse page with URL-driven filters
-- [ ] Client-side search with Fuse.js
-- [ ] Sort by newest, stars, and name
-- [ ] `/skills/[slug]` detail page with a video embed and an install block
-- [ ] `/categories/[key]` pages
-- [ ] Empty states and the mobile layout
+- [x] Skill card component (category tint, stars, platforms, freshness dot)
+- [x] `/skills` browse page with URL-driven filters and live counts per option
+- [x] Client-side search with Fuse.js (press / to focus)
+- [x] Sort by newest, stars, recently updated and name (plus best match while searching)
+- [x] `/skills/[slug]` detail page with a video embed, an install block with copy, and related skills
+- [x] `/categories`, `/categories/[key]` and `/tags/[tag]` pages
+- [x] Empty states, dark mode and the mobile layout (checked at 375 px)
 
 **Done when:** you can find any of the 5 seed skills in under 15 seconds on a phone.
 
@@ -398,3 +398,4 @@ Check the trademark and the domain before you commit to a name.
 | 2026-09-02 | 0 | Plan written. |
 | 2026-09-15 | 0 | Repo created. Next.js 16 + Tailwind v4 + shadcn/ui scaffold builds. Push and deploy wait for Ahmed. |
 | 2026-09-15 | 1 | Content model: schema, loader, validator, generator, 5 seeds, unit tests. Switched MDX to plain Markdown for PR safety. |
+| 2026-09-15 | 2 | MVP site: home, browse with search + filters in the URL, detail, category and tag pages. All pages are static. |

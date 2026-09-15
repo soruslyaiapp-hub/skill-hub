@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -126,5 +127,31 @@
   }
   html {
     @apply font-sans;
+  }
+}
+/* Category tints. Set --h (an OKLCH hue) on the element, e.g. style={{ "--h": 265 }}. */
+@layer components {
+  .tint {
+    background-color: oklch(0.95 0.045 var(--h, 250));
+    color: oklch(0.45 0.13 var(--h, 250));
+  }
+  .dark .tint {
+    background-color: oklch(0.32 0.07 var(--h, 250));
+    color: oklch(0.9 0.09 var(--h, 250));
+  }
+  .tint-soft {
+    background-color: oklch(0.985 0.012 var(--h, 250));
+  }
+  .dark .tint-soft {
+    background-color: oklch(0.2 0.022 var(--h, 250));
+  }
+  .tint-text {
+    color: oklch(0.5 0.14 var(--h, 250));
+  }
+  .dark .tint-text {
+    color: oklch(0.82 0.1 var(--h, 250));
+  }
+  .tint-dot {
+    background-color: oklch(0.65 0.16 var(--h, 250));
   }
 }
