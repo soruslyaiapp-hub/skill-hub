@@ -2,6 +2,8 @@
 
 The open directory of AI skills, agents, MCP servers and tools, sorted by the job they do.
 
+**Live site: https://skill-hub-teal.vercel.app**
+
 Good skills get shared on LinkedIn and then sink in the feed. SkillHub keeps them. Every entry gets a permanent, searchable page with a plain-English write-up, the install command and a link to the source.
 
 ## Features
@@ -87,7 +89,7 @@ Counts are public. Who voted is private (row-level security). Without the variab
 ## CLI
 
 ```bash
-SKILLHUB_API=https://your-domain.com/api/skills.json node packages/cli/bin/skillhub.mjs search token
+node packages/cli/bin/skillhub.mjs search token
 ```
 
 See [packages/cli/README.md](packages/cli/README.md).
