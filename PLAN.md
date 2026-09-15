@@ -3,7 +3,7 @@
 > An open, searchable directory of AI skills, agents, MCP servers and prompts.
 > Think "Hugging Face, but for skills instead of models."
 
-- **Status:** In progress — Phase 0 done
+- **Status:** In progress — Phase 1 done
 - **Owner:** Ahmed
 - **Created:** 2026-09-02
 - **Last updated:** 2026-09-15
@@ -54,6 +54,7 @@ A **skill** is any packaged, reusable AI capability. It can be:
 | `workflow` | A multi-step recipe or slash command |
 | `hook` | An automation hook |
 | `plugin` | A bundle of the above |
+| `tool` | A CLI, library or app used with an agent (RTK, Repomix) |
 
 ---
 
@@ -84,8 +85,8 @@ Rule: if a skill fits two categories, pick the **job it does**, not the tool it 
 
 These are separate filters, not categories:
 
-- **Platform:** Claude Code / Claude.ai / ChatGPT / Cursor / Windsurf / OpenAI SDK / Any
-- **Type:** skill / mcp / agent / prompt / workflow / hook / plugin
+- **Platform:** Claude Code / Claude.ai / Codex / Cursor / VS Code / Windsurf / ChatGPT / Any
+- **Type:** skill / mcp / agent / prompt / workflow / hook / plugin / tool
 - **Difficulty:** Beginner / Intermediate / Advanced
 - **Price:** Free / Freemium / Paid
 - **Status:** Verified / Community / Experimental / Deprecated
@@ -98,7 +99,7 @@ These are separate filters, not categories:
 
 One file per skill. Human readable. Git tracked. Reviewable in a pull request.
 
-`content/skills/<slug>.mdx`
+`content/skills/<slug>.md`
 
 ```yaml
 ---
@@ -160,7 +161,7 @@ works, install steps, an example of the output, and the gotchas.
 | Framework | **Next.js 16 (App Router)** | Static pages, great SEO, easy OG images |
 | Language | **TypeScript** | Type-safe front matter |
 | Styling | **Tailwind CSS v4 + shadcn/ui** | Fast, clean, dark mode built in |
-| Content | **MDX with a typed loader** | Rich bodies, typed front matter |
+| Content | **Markdown + YAML front matter** | Safe for public PRs: plain Markdown cannot run code at build time (MDX can) |
 | Validation | **Zod** | Bad front matter fails the build, not the site |
 | Search | **Fuse.js** (client side) | Zero cost up to about 2,000 skills |
 | Icons | **Lucide** | Consistent |
@@ -235,11 +236,11 @@ Each phase ends with something you can show people.
 
 ### Phase 1 — Content model (1 day)
 
-- [ ] Write the Zod schema for the skill front matter
-- [ ] Write the MDX loader and the build-time validator
-- [ ] Write `content/categories.ts` (the table in section 3.1)
-- [ ] Add 5 real skills from your old LinkedIn posts
-- [ ] Add `scripts/new-skill.ts`, a prompt-based file generator
+- [x] Write the Zod schema for the skill front matter (`src/lib/content/schema.ts`)
+- [x] Write the Markdown loader and the validator (`npm run validate` runs before every build)
+- [x] Write the category list (`src/lib/taxonomy.ts`) and filter lists (`src/lib/facets.ts`)
+- [x] Add 5 real seed skills, checked against GitHub (swap in your LinkedIn picks any time)
+- [x] Add `npm run new-skill`, a question-based file generator that never overwrites
 
 **Done when:** `npm run build` fails if any skill file is wrong.
 
@@ -396,3 +397,4 @@ Check the trademark and the domain before you commit to a name.
 |------|-------|------|
 | 2026-09-02 | 0 | Plan written. |
 | 2026-09-15 | 0 | Repo created. Next.js 16 + Tailwind v4 + shadcn/ui scaffold builds. Push and deploy wait for Ahmed. |
+| 2026-09-15 | 1 | Content model: schema, loader, validator, generator, 5 seeds, unit tests. Switched MDX to plain Markdown for PR safety. |
