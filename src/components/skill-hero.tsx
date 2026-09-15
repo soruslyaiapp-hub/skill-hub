@@ -4,15 +4,20 @@ import { buttonVariants } from "@/components/ui/button";
 import type { Skill } from "@/lib/content/parse";
 import { SKILL_TYPES } from "@/lib/facets";
 import { formatCompact } from "@/lib/format";
+import { linkedInShareUrl } from "@/lib/share";
 import type { SkillSummary } from "@/lib/summary";
 import { CATEGORIES } from "@/lib/taxonomy";
 import { CategoryTile, hueStyle } from "./category-icon";
+import { CopyButton } from "./copy-button";
 import { FreshnessDot } from "./freshness-dot";
+import { LinkedInIcon } from "./icons";
 import { StatusBadge } from "./status-badge";
 
 const EXTERNAL = { target: "_blank", rel: "noopener noreferrer" } as const;
 
-export function SkillHero({ skill, summary, editUrl }: { skill: Skill; summary: SkillSummary; editUrl: string | null }) {
+type Props = { skill: Skill; summary: SkillSummary; pageUrl: string; editUrl: string | null };
+
+export function SkillHero({ skill, summary, pageUrl, editUrl }: Props) {
   const category = CATEGORIES[skill.category];
   return (
     <>
@@ -42,7 +47,7 @@ export function SkillHero({ skill, summary, editUrl }: { skill: Skill; summary: 
           <CategoryTile category={skill.category} size="lg" />
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-              <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">{skill.name}</h1>
+              <h1 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">{skill.name}</h1>
               <StatusBadge status={skill.status} />
             </div>
             <p className="mt-3 max-w-3xl text-pretty text-lg text-muted-foreground">{skill.tagline}</p>
@@ -64,7 +69,7 @@ export function SkillHero({ skill, summary, editUrl }: { skill: Skill; summary: 
               ) : null}
               <FreshnessDot withLabel freshness={summary.freshness} date={summary.lastActivity} />
             </div>
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-6 flex flex-wrap items-center gap-2">
               <a href={skill.links.source} {...EXTERNAL} className={buttonVariants({ size: "lg" })}>
                 View source
                 <ArrowUpRight data-icon="inline-end" />
@@ -75,6 +80,11 @@ export function SkillHero({ skill, summary, editUrl }: { skill: Skill; summary: 
                   Docs
                 </a>
               ) : null}
+              <a href={linkedInShareUrl(pageUrl)} {...EXTERNAL} className={buttonVariants({ variant: "outline", size: "lg" })}>
+                <LinkedInIcon data-icon="inline-start" className="size-4 text-[#0A66C2] dark:text-[#70B5F9]" />
+                Share
+              </a>
+              <CopyButton value={pageUrl} label="Copy link to this skill" />
               {editUrl ? (
                 <a href={editUrl} {...EXTERNAL} className={buttonVariants({ variant: "ghost", size: "lg" })}>
                   <PencilLine data-icon="inline-start" />

@@ -6,6 +6,7 @@ import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { GitHubIcon } from "./icons";
 import { MobileNav } from "./mobile-nav";
+import { NavLinks } from "./nav-links";
 import { ThemeToggle } from "./theme-toggle";
 
 export const NAV_LINKS = [
@@ -30,15 +31,7 @@ export function SiteHeader() {
       <div className="relative mx-auto flex h-14 w-full max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
         <Logo />
         <nav aria-label="Main" className="hidden md:block">
-          <ul className="flex items-center gap-1">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className="rounded-md px-3 py-1.5 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <NavLinks links={NAV_LINKS} />
         </nav>
         <div className="ml-auto flex items-center gap-1">
           <Form action="/skills" className="relative hidden sm:block" role="search">

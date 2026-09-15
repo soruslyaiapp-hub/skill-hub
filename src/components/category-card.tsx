@@ -6,7 +6,7 @@ export function CategoryCard({ category, count }: { category: CategoryMeta; coun
   return (
     <Link
       href={`/categories/${category.key}`}
-      className="group flex items-start gap-3 rounded-xl border bg-card p-4 transition hover:border-foreground/20 hover:shadow-sm"
+      className="group flex items-start gap-3 rounded-xl border bg-card p-4 outline-none transition hover:border-foreground/20 hover:shadow-sm focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
     >
       <CategoryTile category={category.key} />
       <span className="min-w-0 flex-1">

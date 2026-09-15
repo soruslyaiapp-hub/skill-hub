@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Pages read skill files from disk at build time. Ship them too, in case a route ever renders on request.
+  outputFileTracingIncludes: { "/**": ["./content/**/*"] },
 };
 
 export default nextConfig;

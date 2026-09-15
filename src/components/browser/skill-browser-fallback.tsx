@@ -20,7 +20,7 @@ export function SkillBrowserFallback({ skills }: { skills: SkillSummary[] }) {
           <span className="font-medium text-foreground">{skills.length}</span> skills
         </p>
         <div className="mt-4">
-          <SkillGrid skills={skills} />
+          <SkillGrid skills={skills} label="Results" />
         </div>
       </div>
     </div>

@@ -103,7 +103,7 @@ export function SkillBrowser({ skills, lockedCategory }: { skills: SkillSummary[
 
         <div className="mt-4">
           {view.results.length > 0 ? (
-            <SkillGrid skills={view.results} />
+            <SkillGrid skills={view.results} label="Results" />
           ) : (
             <div className="flex flex-col items-center rounded-xl border border-dashed px-6 py-16 text-center">
               <SearchX aria-hidden className="size-8 text-muted-foreground" />

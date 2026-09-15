@@ -3,10 +3,12 @@ import Form from "next/form";
 import Link from "next/link";
 import { CategoryCard } from "@/components/category-card";
 import { Container } from "@/components/container";
+import { JsonLd } from "@/components/json-ld";
 import { SectionHeader } from "@/components/section-header";
 import { SkillGrid } from "@/components/skill-grid";
 import { buttonVariants } from "@/components/ui/button";
 import { countByCategory, getSummaries } from "@/lib/catalog";
+import { websiteJsonLd } from "@/lib/structured-data";
 import { CATEGORIES, categoryList } from "@/lib/taxonomy";
 import { cn } from "@/lib/utils";
 
@@ -18,6 +20,7 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd data={websiteJsonLd()} />
       <section className="border-b bg-gradient-to-b from-muted/60 to-background">
         <Container className="py-16 sm:py-24">
           <p className="text-sm font-medium text-muted-foreground">

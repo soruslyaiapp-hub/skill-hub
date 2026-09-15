@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/container";
 import { InstallBlock } from "@/components/install-block";
+import { JsonLd } from "@/components/json-ld";
 import { Markdown } from "@/components/markdown";
 import { SkillFacts } from "@/components/skill-facts";
 import { SkillGrid } from "@/components/skill-grid";
@@ -9,7 +10,9 @@ import { SkillHero } from "@/components/skill-hero";
 import { VideoEmbed } from "@/components/video-embed";
 import { getRelated } from "@/lib/catalog";
 import { getAllSkills, getSkill } from "@/lib/content/skills";
-import { site } from "@/lib/site";
+import { absoluteUrl, site } from "@/lib/site";
+import { breadcrumbJsonLd, skillJsonLd } from "@/lib/structured-data";
+import { CATEGORIES } from "@/lib/taxonomy";
 import { toSummary } from "@/lib/summary";
 
 export const dynamicParams = false;
@@ -25,7 +28,8 @@ export async function generateMetadata({ params }: PageProps<"/skills/[slug]">):
     title: skill.name,
     description: skill.tagline,
     alternates: { canonical: `/skills/${skill.slug}` },
-    openGraph: { title: skill.name, description: skill.tagline, type: "article", url: `/skills/${skill.slug}` },
+    openGraph: { title: skill.name, description: skill.tagline, type: "article", url: `/skills/${skill.slug}`, siteName: site.name },
+    twitter: { card: "summary_large_image", title: skill.name, description: skill.tagline },
   };
 }
 
@@ -37,11 +41,22 @@ export default async function SkillPage({ params }: PageProps<"/skills/[slug]">)
 
   const summary = toSummary(skill);
   const related = getRelated(skill, 3);
+  const pageUrl = absoluteUrl(`/skills/${skill.slug}`);
   const editUrl = site.isRepoConfigured ? `${site.repoUrl}/edit/${site.defaultBranch}/content/skills/${skill.slug}.md` : null;
 
   return (
     <Container className="py-8">
-      <SkillHero skill={skill} summary={summary} editUrl={editUrl} />
+      <JsonLd
+        data={[
+          skillJsonLd(skill),
+          breadcrumbJsonLd([
+            { name: "Skills", path: "/skills" },
+            { name: CATEGORIES[skill.category].short, path: `/categories/${skill.category}` },
+            { name: skill.name, path: `/skills/${skill.slug}` },
+          ]),
+        ]}
+      />
+      <SkillHero skill={skill} summary={summary} pageUrl={pageUrl} editUrl={editUrl} />
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_18rem]">
         <div className="min-w-0 space-y-10">

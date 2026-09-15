@@ -13,14 +13,14 @@ export function SkillCard({ skill }: { skill: SkillSummary }) {
   return (
     <Link
       href={`/skills/${skill.slug}`}
-      className="group flex w-full flex-col gap-3 rounded-xl border bg-card p-4 text-card-foreground transition hover:border-foreground/20 hover:shadow-sm"
+      className="group flex w-full flex-col gap-3 rounded-xl border bg-card p-4 text-card-foreground outline-none transition hover:border-foreground/20 hover:shadow-sm focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
     >
       <div className="flex items-start gap-3">
         <CategoryTile category={skill.category} />
         <div className="min-w-0 flex-1">
-          <h3 className="flex items-center gap-1 font-semibold leading-tight">
-            <span className="truncate underline-offset-4 group-hover:underline">{skill.name}</span>
-            {skill.status === "verified" ? <BadgeCheck aria-label="Verified" className="size-4 shrink-0 text-sky-500" /> : null}
+          <h3 className="flex items-start gap-1 font-semibold leading-snug">
+            <span className="line-clamp-2 underline-offset-4 group-hover:underline">{skill.name}</span>
+            {skill.status === "verified" ? <BadgeCheck aria-label="Verified" className="mt-0.5 size-4 shrink-0 text-sky-500" /> : null}
           </h3>
           <p className="mt-1 truncate text-xs text-muted-foreground">
             {skill.author} · {SKILL_TYPES[skill.type].name}

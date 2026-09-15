@@ -28,7 +28,7 @@ export default async function TagPage({ params }: PageProps<"/tags/[tag]">) {
           Browse all skills
         </Link>
       </PageHeader>
-      <SkillGrid skills={skills} />
+      <SkillGrid skills={skills} label="Skills" />
     </Container>
   );
 }

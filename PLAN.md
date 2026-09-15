@@ -3,7 +3,7 @@
 > An open, searchable directory of AI skills, agents, MCP servers and prompts.
 > Think "Hugging Face, but for skills instead of models."
 
-- **Status:** In progress — Phase 3 done
+- **Status:** In progress — Phase 4 done
 - **Owner:** Ahmed
 - **Created:** 2026-09-02
 - **Last updated:** 2026-09-15
@@ -268,12 +268,13 @@ Each phase ends with something you can show people.
 
 ### Phase 4 — Polish and SEO (2 days)
 
-- [ ] Design pass: type scale, spacing, dark mode, focus rings
-- [ ] Auto-generated OG images per skill (`opengraph-image.tsx`)
-- [ ] `sitemap.xml`, `robots.txt`, schema.org `SoftwareApplication` JSON-LD
-- [ ] Lighthouse pass: performance, accessibility, and SEO all above 90
-- [ ] 404 page and loading skeletons
-- [ ] Add analytics
+- [x] Design pass: card names wrap to two lines, active menu link, focus rings on cards, light and dark mode checked
+- [x] Auto-generated OG images for the site and for every skill (made at build time)
+- [x] LinkedIn Share button and Copy link on every skill page
+- [x] `sitemap.xml`, `robots.txt`, schema.org `SoftwareApplication` JSON-LD (plus breadcrumbs and a site search action)
+- [x] Lighthouse pass: accessibility, best practices and SEO all 100 (home on desktop, /skills on mobile). Speed: LCP 0.26 s on desktop, 2.0 s on a throttled phone (good is under 2.5 s), layout shift 0
+- [x] 404 page and loading skeletons
+- [x] Add analytics: Plausible or Umami, off until an env var is set (see `.env.example`)
 
 **Done when:** pasting a skill URL into LinkedIn shows a good preview card.
 
@@ -402,3 +403,4 @@ Check the trademark and the domain before you commit to a name.
 | 2026-09-15 | 1 | Content model: schema, loader, validator, generator, 5 seeds, unit tests. Switched MDX to plain Markdown for PR safety. |
 | 2026-09-15 | 2 | MVP site: home, browse with search + filters in the URL, detail, category and tag pages. All pages are static. |
 | 2026-09-15 | 3 | 47 real skills across all 12 categories. GitHub stats filled by the new sync script. |
+| 2026-09-15 | 4 | OG images, sitemap, robots, JSON-LD, 404, skeletons, analytics hook, LinkedIn share. Lighthouse 100 on accessibility, best practices and SEO. |
