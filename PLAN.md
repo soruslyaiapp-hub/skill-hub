@@ -3,7 +3,7 @@
 > An open, searchable directory of AI skills, agents, MCP servers and prompts.
 > Think "Hugging Face, but for skills instead of models."
 
-- **Status:** In progress — Phase 4 done
+- **Status:** In progress — Phase 5 done
 - **Owner:** Ahmed
 - **Created:** 2026-09-02
 - **Last updated:** 2026-09-15
@@ -280,10 +280,12 @@ Each phase ends with something you can show people.
 
 ### Phase 5 — Contribution flow (2 days)
 
-- [ ] `/submit` form that builds a pre-filled GitHub PR link
-- [ ] `CONTRIBUTING.md` and a PR template
-- [ ] GitHub Action: validate the front matter on every PR
-- [ ] Nightly Action: refresh GitHub stars and the last-commit date
+- [x] `/submit` form that builds a pre-filled GitHub PR link (live checks with the same rules as the build, plus a "suggest in an issue" fallback)
+- [x] `/about` page, and Submit + About in the menu
+- [x] `CONTRIBUTING.md`, a PR template and a "Suggest a skill" issue form
+- [x] GitHub Action (CI): validate, test, lint, type check and build on every PR
+- [x] Nightly Action: refresh GitHub stars, last commit, licence and archived state, then commit
+- [x] Weekly Action: check every link and open an issue if any are broken (`npm run check:links`)
 
 **Done when:** a stranger can add a skill without your help.
 
@@ -404,3 +406,4 @@ Check the trademark and the domain before you commit to a name.
 | 2026-09-15 | 2 | MVP site: home, browse with search + filters in the URL, detail, category and tag pages. All pages are static. |
 | 2026-09-15 | 3 | 47 real skills across all 12 categories. GitHub stats filled by the new sync script. |
 | 2026-09-15 | 4 | OG images, sitemap, robots, JSON-LD, 404, skeletons, analytics hook, LinkedIn share. Lighthouse 100 on accessibility, best practices and SEO. |
+| 2026-09-15 | 5 | Submit form to PR, about page, CI, nightly stats, weekly link check, CONTRIBUTING, templates, full README. All 92 links OK. |

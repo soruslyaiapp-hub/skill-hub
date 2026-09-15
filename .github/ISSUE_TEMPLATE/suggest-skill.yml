@@ -1,0 +1,49 @@
+name: Suggest a skill
+description: Tell us about a skill, agent, MCP server or tool that should be listed.
+title: "Suggest: "
+body:
+  - type: markdown
+    attributes:
+      value: Thanks! A short suggestion is enough. We check it and write the entry.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Link to the source
+      description: GitHub repo or home page (https)
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category (the job it does)
+      options:
+        - Agent Optimization
+        - Token & Cost Optimization
+        - Coding & Engineering
+        - Media & Creative
+        - Content & Writing
+        - Data & Research
+        - Business & Ops
+        - DevOps & Infra
+        - Security & Compliance
+        - Productivity & Personal
+        - Integrations & Connectors
+        - Meta / Skill Building
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it useful?
+      description: One or two sentences.
+    validations:
+      required: true
+  - type: input
+    id: linkedin
+    attributes:
+      label: LinkedIn post (optional)
+      description: If you wrote about it, paste the link.

@@ -1,0 +1,44 @@
+name: Refresh GitHub stats
+
+# Every night: refresh stars, last commit, licence and archived state, then commit.
+# The commit to main triggers a new deploy, so the freshness dots stay current.
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-metrics
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Refresh stats from the GitHub API
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run sync:github || echo "::warning::Some repositories could not be refreshed. See the log above."
+      - name: Validate
+        run: npm run validate
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- content/skills; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/skills
+          git commit -m "chore: refresh GitHub stats"
+          git push

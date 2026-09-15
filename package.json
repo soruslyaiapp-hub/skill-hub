@@ -13,7 +13,8 @@
     "validate": "tsx scripts/validate.ts",
     "new-skill": "tsx scripts/new-skill.ts",
     "sync:github": "tsx scripts/sync-github.ts",
-    "import": "tsx scripts/import-skills.ts"
+    "import": "tsx scripts/import-skills.ts",
+    "check:links": "tsx scripts/check-links.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

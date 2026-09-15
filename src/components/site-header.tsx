@@ -12,6 +12,8 @@ import { ThemeToggle } from "./theme-toggle";
 export const NAV_LINKS = [
   { href: "/skills", label: "Browse" },
   { href: "/categories", label: "Categories" },
+  { href: "/submit", label: "Submit" },
+  { href: "/about", label: "About" },
 ] as const;
 
 export function Logo() {

@@ -28,7 +28,11 @@ function FooterGroup({ title, links }: { title: string; links: FooterLink[] }) {
 }
 
 export function SiteFooter() {
-  const project: FooterLink[] = site.isRepoConfigured ? [{ href: site.repoUrl, label: "GitHub", external: true }] : [];
+  const project: FooterLink[] = [
+    { href: "/submit", label: "Submit a skill" },
+    { href: "/about", label: "About" },
+    ...(site.isRepoConfigured ? [{ href: site.repoUrl, label: "GitHub", external: true }] : []),
+  ];
   return (
     <footer className="mt-20 border-t text-sm text-muted-foreground">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-10 px-4 py-12 sm:px-6 md:flex-row md:justify-between lg:px-8">
@@ -45,7 +49,7 @@ export function SiteFooter() {
               { href: "/skills?sort=stars", label: "Most starred" },
             ]}
           />
-          {project.length ? <FooterGroup title="Project" links={project} /> : null}
+          <FooterGroup title="Project" links={project} />
         </div>
       </div>
       <div className="border-t">

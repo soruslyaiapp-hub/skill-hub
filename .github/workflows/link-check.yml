@@ -1,0 +1,30 @@
+name: Check links
+
+# Every Monday: check every link in the skill files and open an issue if any are broken.
+
+on:
+  schedule:
+    - cron: "41 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Check links
+        run: npm run check:links -- --report link-report.md
+      - name: Open an issue with the broken links
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue create --title "Broken links found on $(date +%F)" --body-file link-report.md

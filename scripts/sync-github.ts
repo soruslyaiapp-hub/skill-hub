@@ -1,7 +1,7 @@
 /**
  * Refresh GitHub stats (stars, last commit, license, archived, language) in every skill file.
  *   npm run sync:github                      update the files
- *   npm run sync:github -- --dry-run         show what would change, write nothing
+ *   npm run sync:github -- --dry-run         show what would change, write nothing (still uses API calls)
  *   npm run sync:github -- --only rtk,repomix
  * Set GITHUB_TOKEN for 5,000 requests per hour (60 without it).
  */

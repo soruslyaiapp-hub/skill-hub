@@ -36,18 +36,18 @@ const linkedinUrl = httpsUrl.refine(
 
 export const skillSchema = z.strictObject({
   slug: z.string().regex(SLUG_RE, "must be lowercase-kebab-case, like my-skill"),
-  name: z.string().trim().min(2).max(60),
-  tagline: z.string().trim().min(10).max(140),
+  name: z.string().trim().min(2, "use 2 to 60 characters").max(60, "use 2 to 60 characters"),
+  tagline: z.string().trim().min(10, "use 10 to 140 characters").max(140, "use 10 to 140 characters"),
   category: z.enum(CATEGORY_KEYS),
   type: z.enum(TYPE_KEYS),
   tags: z.array(z.string().regex(SLUG_RE, "tags must be lowercase-kebab-case")).max(8).default([]),
-  platforms: z.array(z.enum(PLATFORM_KEYS)).min(1),
+  platforms: z.array(z.enum(PLATFORM_KEYS)).min(1, "pick at least one platform"),
   difficulty: z.enum(DIFFICULTY_KEYS),
   price: z.enum(PRICE_KEYS),
   status: z.enum(STATUS_KEYS).default("community"),
   language: z.string().trim().max(30).optional(),
   author: z.strictObject({
-    name: z.string().trim().min(1).max(80),
+    name: z.string().trim().min(1, "is required").max(80),
     url: httpsUrl.optional(),
   }),
   links: z.strictObject({
