@@ -1,27 +1,27 @@
 #!/usr/bin/env node
-// SkillHub CLI: search the directory and install a skill. No dependencies.
+// SkillCurio CLI: search the directory and install a skill. No dependencies.
 import { spawn } from "node:child_process";
 import { createInterface } from "node:readline/promises";
 
-const API = process.env.SKILLHUB_API || "https://skill-hub-teal.vercel.app/api/skills.json";
+const API = process.env.SKILLCURIO_API || "https://skillcurio.dev/api/skills.json";
 
-const HELP = `skillhub: search and install AI skills
+const HELP = `skillcurio: search and install AI skills
 
 Usage:
-  skillhub search <words>   find skills
-  skillhub info <slug>      show one skill
-  skillhub add <slug>       show the install command, then run it if you say yes
+  skillcurio search <words>   find skills
+  skillcurio info <slug>      show one skill
+  skillcurio add <slug>       show the install command, then run it if you say yes
 
-Data comes from SKILLHUB_API (now: ${API}).`;
+Data comes from SKILLCURIO_API (now: ${API}).`;
 
 async function loadSkills() {
   let res;
   try {
     res = await fetch(API);
   } catch {
-    throw new Error(`Could not reach ${API}. Is the site up? Set SKILLHUB_API to your SkillHub site.`);
+    throw new Error(`Could not reach ${API}. Is the site up? Set SKILLCURIO_API to your SkillCurio site.`);
   }
-  if (!res.ok) throw new Error(`Could not load ${API} (HTTP ${res.status}). Set SKILLHUB_API to your SkillHub site.`);
+  if (!res.ok) throw new Error(`Could not load ${API} (HTTP ${res.status}). Set SKILLCURIO_API to your SkillCurio site.`);
   return (await res.json()).skills;
 }
 
@@ -33,7 +33,7 @@ function score(skill, words) {
 
 function findSkill(skills, slug) {
   const skill = skills.find((s) => s.slug === slug);
-  if (!skill) throw new Error(`No skill "${slug}". Try: skillhub search ${slug}`);
+  if (!skill) throw new Error(`No skill "${slug}". Try: skillcurio search ${slug}`);
   return skill;
 }
 
@@ -69,7 +69,7 @@ async function main() {
   if (command === "add") {
     if (!skill.install) return console.log(`No install command listed. Follow the source: ${skill.source}`);
     console.log(`\n  ${skill.install}\n`);
-    console.log("Read the command first. It comes from the SkillHub listing and runs on your machine.");
+    console.log("Read the command first. It comes from the SkillCurio listing and runs on your machine.");
     if (!(await confirm("Run it now? [y/N] "))) return console.log("Not run. Copy the command above if you want it.");
     const child = spawn(skill.install, { shell: true, stdio: "inherit" });
     child.on("exit", (code) => process.exit(code ?? 0));

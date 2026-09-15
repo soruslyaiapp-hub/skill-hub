@@ -12,7 +12,8 @@ function resolveSiteUrl(): string {
 const repo = process.env.NEXT_PUBLIC_GITHUB_REPO?.trim() || "soruslyaiapp-hub/skill-hub";
 
 export const site = {
-  name: "SkillHub",
+  name: "SkillCurio",
+  maker: "Sorusly AI Labs",
   tagline: "The open directory of AI skills, agents and MCP servers.",
   description:
     "Find, compare and install AI skills, agents, MCP servers and prompts — sorted by the job they do.",

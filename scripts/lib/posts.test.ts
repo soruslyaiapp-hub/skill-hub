@@ -5,11 +5,11 @@ import { buildLinkedInPost, hashtag, sectionText } from "./linkedin";
 
 describe("LinkedIn post", () => {
   it("builds a post from the skill write-up", () => {
-    const post = buildLinkedInPost(getSkill("rtk")!, "https://skillhub.dev/skills/rtk");
+    const post = buildLinkedInPost(getSkill("rtk")!, "https://skillcurio.dev/skills/rtk");
     expect(post.split("\n")[0]).toMatch(/^RTK \(Rust Token Killer\): /);
     expect(post).toContain("→ ");
     expect(post).toContain("Try it: brew install rtk");
-    expect(post).toContain("https://skillhub.dev/skills/rtk");
+    expect(post).toContain("https://skillcurio.dev/skills/rtk");
     expect(post).toMatch(/#AI #AIAgents #ClaudeCode/);
   });
 

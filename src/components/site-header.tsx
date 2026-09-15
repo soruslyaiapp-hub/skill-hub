@@ -51,7 +51,7 @@ export function SiteHeader() {
             <Search />
           </Link>
           {site.isRepoConfigured ? (
-            <a href={site.repoUrl} target="_blank" rel="noopener noreferrer" aria-label="SkillHub on GitHub" className={buttonVariants({ variant: "ghost", size: "icon" })}>
+            <a href={site.repoUrl} target="_blank" rel="noopener noreferrer" aria-label={`${site.name} on GitHub`} className={buttonVariants({ variant: "ghost", size: "icon" })}>
               <GitHubIcon className="size-4" />
             </a>
           ) : null}

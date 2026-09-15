@@ -1,9 +1,9 @@
-# SkillHub — Build Plan
+# SkillCurio (formerly SkillHub) — Build Plan
 
 > An open, searchable directory of AI skills, agents, MCP servers and prompts.
 > Think "Hugging Face, but for skills instead of models."
 
-- **Status:** Live at https://skill-hub-teal.vercel.app with 90 skills. Waiting on Ahmed: mark tested skills verified, optional custom domain and Supabase.
+- **Status:** Renamed to SkillCurio, by Sorusly AI Labs. Moving to https://skillcurio.dev (bought 2026-09-16); still live at https://skill-hub-teal.vercel.app. 90 skills. Waiting on Ahmed: mark tested skills verified, optional Supabase.
 - **Owner:** Ahmed
 - **Created:** 2026-09-02
 - **Last updated:** 2026-09-15
@@ -226,8 +226,8 @@ Each phase ends with something you can show people.
 
 ### Phase 0 — Setup (0.5 day)
 
-- [x] Working name: **SkillHub** (rename in one place: `src/lib/site.ts`)
-- [ ] Buy the domain (see D1)
+- [x] Working name: **SkillHub**, renamed to **SkillCurio** on 2026-09-16 (one place: `src/lib/site.ts`)
+- [x] Domain: **skillcurio.dev**, bought on Cloudflare on 2026-09-16
 - [x] `git init` and MIT licence
 - [x] Pushed to GitHub, now at https://github.com/soruslyaiapp-hub/skill-hub (public). CI passes.
 - [x] Deployed on Vercel (project `skill-hub` in Verbalyft's projects): https://skill-hub-teal.vercel.app
@@ -395,7 +395,7 @@ Check the trademark and the domain before you commit to a name.
 
 ## 12. Open decisions
 
-- [ ] **D1 — Name and domain.** This blocks Phase 0.
+- [x] **D1 — Name and domain.** SkillCurio, at skillcurio.dev. Handles: @skillcurio.
 - [x] **D2 — Content in Git files, or in Supabase?** Decided: Git files.
       Recommendation: **Git files.** Free, reviewable, and it fits your workflow.
       Move to a database only if non-technical people must add skills by form.
@@ -417,3 +417,4 @@ Check the trademark and the domain before you commit to a name.
 | 2026-09-15 | 6 | JSON API, RSS, collections, skill of the week, compare, bookmarks, newsletter, upvotes (off), CLI, digest and LinkedIn scripts. 63+ tests. |
 | 2026-09-15 | Launch | Repo pushed to GitHub (now soruslyaiapp-hub/skill-hub); CI green; deployed on Vercel at https://skill-hub-teal.vercel.app. |
 | 2026-09-15 | Content | Added 43 skills from Ahmed's LinkedIn posts and linked 3 existing ones (46 in total point to their post). New types: Model and Learning resource. 90 skills. AI-news posts were left out. |
+| 2026-09-16 | Brand | Renamed to SkillCurio (by Sorusly AI Labs). Domain skillcurio.dev bought; DNS and Vercel setup next. |

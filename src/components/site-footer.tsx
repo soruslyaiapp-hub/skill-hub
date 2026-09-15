@@ -64,7 +64,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t">
         <p className="mx-auto w-full max-w-7xl px-4 py-5 text-xs sm:px-6 lg:px-8">
-          Code under the MIT licence. Each listed project belongs to its authors.
+          {site.name} is made by {site.maker}. Code under the MIT licence. Each listed project belongs to its authors.
         </p>
       </div>
     </footer>

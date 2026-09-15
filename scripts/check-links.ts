@@ -10,7 +10,7 @@ import { collectLinks } from "./lib/links";
 
 const CONCURRENCY = 6;
 const TIMEOUT_MS = 15_000;
-const HEADERS = { "User-Agent": "Mozilla/5.0 (compatible; SkillHubLinkCheck/1.0)" };
+const HEADERS = { "User-Agent": "Mozilla/5.0 (compatible; SkillCurioLinkCheck/1.0)" };
 
 type Result = { status: number | string; ok: boolean };
 

@@ -36,7 +36,7 @@ Claude Code understands your codebase and takes action through natural language.
 ## Why it is useful
 
 - Works in your terminal, in your IDE, and on GitHub when you tag @claude.
-- Most of the skills on SkillHub plug into it.
+- Most of the skills on SkillCurio plug into it.
 
 ## How to use it
 

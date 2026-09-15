@@ -1,6 +1,6 @@
-# Contributing to SkillHub
+# Contributing to SkillCurio
 
-Thank you for helping. SkillHub is a curated list, so every entry is reviewed before it goes live.
+Thank you for helping. SkillCurio is a curated list, so every entry is reviewed before it goes live.
 
 ## Three ways to add a skill
 

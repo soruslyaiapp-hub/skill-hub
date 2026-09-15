@@ -26,7 +26,7 @@ async function fetchRepo(repo: string, token?: string): Promise<FetchResult> {
   const res = await fetch(`https://api.github.com/repos/${repo}`, {
     headers: {
       Accept: "application/vnd.github+json",
-      "User-Agent": "skillhub-sync",
+      "User-Agent": "skillcurio-sync",
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
     },
   });

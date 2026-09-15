@@ -47,7 +47,7 @@ export const PRICES: Record<PriceKey, { name: string }> = {
 export const STATUS_KEYS = ["verified", "community", "experimental", "deprecated"] as const;
 export type StatusKey = (typeof STATUS_KEYS)[number];
 export const STATUSES: Record<StatusKey, { name: string; description: string }> = {
-  verified: { name: "Verified", description: "Tested by the SkillHub curator." },
+  verified: { name: "Verified", description: "Tested by the SkillCurio curator." },
   community: { name: "Community", description: "Listed from public sources. Not tested by us yet." },
   experimental: { name: "Experimental", description: "Early or unstable. Expect changes." },
   deprecated: { name: "Deprecated", description: "Archived or replaced. Kept for reference." },

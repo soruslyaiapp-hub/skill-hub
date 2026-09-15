@@ -1,10 +1,10 @@
-# SkillHub
+# SkillCurio
 
 The open directory of AI skills, agents, MCP servers and tools, sorted by the job they do.
 
-**Live site: https://skill-hub-teal.vercel.app**
+**Live site: https://skillcurio.dev** · made by Sorusly AI Labs
 
-Good skills get shared on LinkedIn and then sink in the feed. SkillHub keeps them. Every entry gets a permanent, searchable page with a plain-English write-up, the install command and a link to the source.
+Good skills get shared on LinkedIn and then sink in the feed. SkillCurio keeps them. Every entry gets a permanent, searchable page with a plain-English write-up, the install command and a link to the source.
 
 ## Features
 
@@ -89,7 +89,7 @@ Counts are public. Who voted is private (row-level security). Without the variab
 ## CLI
 
 ```bash
-node packages/cli/bin/skillhub.mjs search token
+node packages/cli/bin/skillcurio.mjs search token
 ```
 
 See [packages/cli/README.md](packages/cli/README.md).
@@ -99,7 +99,7 @@ See [packages/cli/README.md](packages/cli/README.md).
 ```
 content/skills/     one Markdown file per skill
 content/collections/ curated stacks of skills
-packages/cli/       the skillhub CLI (no dependencies)
+packages/cli/       the skillcurio CLI (no dependencies)
 supabase/           SQL for the optional upvotes
 scripts/            validate, new-skill, import, sync-github, check-links
 src/app/            pages, share images, sitemap, robots

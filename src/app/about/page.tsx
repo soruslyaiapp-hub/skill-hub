@@ -8,7 +8,7 @@ import { STATUS_KEYS, STATUSES } from "@/lib/facets";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "What SkillHub is, how skills are chosen, and how to add one.",
+  description: "What SkillCurio is, how skills are chosen, and how to add one.",
   alternates: { canonical: "/about" },
 };
 
@@ -16,11 +16,11 @@ export default function AboutPage() {
   const count = getSummaries().length;
   return (
     <Container className="max-w-3xl py-12">
-      <PageHeader title="About SkillHub" description={`A permanent, searchable library of ${count} AI skills, agents, MCP servers and tools.`} />
+      <PageHeader title="About SkillCurio" description={`A permanent, searchable library of ${count} AI skills, agents, MCP servers and tools.`} />
       <div className="prose prose-neutral max-w-none dark:prose-invert prose-headings:font-semibold prose-a:underline-offset-4">
         <h2>Why it exists</h2>
         <p>
-          Good AI skills get shared on LinkedIn, and then they sink in the feed within days. SkillHub keeps them. Every entry gets a page
+          Good AI skills get shared on LinkedIn, and then they sink in the feed within days. SkillCurio keeps them. Every entry gets a page
           that stays online, with a plain-English write-up, the install command and a link to the source.
         </p>
         <h2>How entries are chosen</h2>
@@ -54,7 +54,7 @@ export default function AboutPage() {
           Every entry is available as JSON at <a href="/api/skills.json">/api/skills.json</a> and as an <a href="/rss.xml">RSS feed</a>. Build on it, and link back.
         </p>
         <h2>Licence</h2>
-        <p>The code is MIT licensed. Each listed project belongs to its authors. SkillHub only links to it.</p>
+        <p>SkillCurio is made by Sorusly AI Labs. The code is MIT licensed. Each listed project belongs to its authors. SkillCurio only links to it.</p>
       </div>
     </Container>
   );
