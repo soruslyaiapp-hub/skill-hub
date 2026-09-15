@@ -1,4 +1,4 @@
-import { Blocks, Search } from "lucide-react";
+import { Blocks, Bookmark, Search } from "lucide-react";
 import Form from "next/form";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
@@ -12,6 +12,7 @@ import { ThemeToggle } from "./theme-toggle";
 export const NAV_LINKS = [
   { href: "/skills", label: "Browse" },
   { href: "/categories", label: "Categories" },
+  { href: "/collections", label: "Collections" },
   { href: "/submit", label: "Submit" },
   { href: "/about", label: "About" },
 ] as const;
@@ -54,6 +55,9 @@ export function SiteHeader() {
               <GitHubIcon className="size-4" />
             </a>
           ) : null}
+          <Link href="/bookmarks" aria-label="Saved skills" title="Saved skills" className={buttonVariants({ variant: "ghost", size: "icon" })}>
+            <Bookmark />
+          </Link>
           <ThemeToggle />
           <MobileNav links={NAV_LINKS} />
         </div>

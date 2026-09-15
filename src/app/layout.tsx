@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   applicationName: site.name,
   openGraph: { siteName: site.name, type: "website", locale: "en_US" },
   twitter: { card: "summary_large_image" },
+  alternates: { types: { "application/rss+xml": [{ url: "/rss.xml", title: `${site.name}: new skills` }] } },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

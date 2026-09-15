@@ -47,9 +47,19 @@ export function SiteFooter() {
               { href: "/skills", label: "Browse all" },
               { href: "/categories", label: "Categories" },
               { href: "/skills?sort=stars", label: "Most starred" },
+              { href: "/collections", label: "Collections" },
+              { href: "/compare", label: "Compare" },
+              { href: "/bookmarks", label: "Saved skills" },
             ]}
           />
           <FooterGroup title="Project" links={project} />
+          <FooterGroup
+            title="Open data"
+            links={[
+              { href: "/rss.xml", label: "RSS feed", external: true },
+              { href: "/api/skills.json", label: "JSON API", external: true },
+            ]}
+          />
         </div>
       </div>
       <div className="border-t">

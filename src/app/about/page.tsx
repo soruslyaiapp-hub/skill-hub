@@ -49,6 +49,10 @@ export default function AboutPage() {
           Use the <Link href="/submit">submit form</Link>. It builds the file for you and opens a pull request on GitHub. Every entry
           is reviewed before it goes live.
         </p>
+        <h2>Open data</h2>
+        <p>
+          Every entry is available as JSON at <a href="/api/skills.json">/api/skills.json</a> and as an <a href="/rss.xml">RSS feed</a>. Build on it, and link back.
+        </p>
         <h2>Licence</h2>
         <p>The code is MIT licensed. Each listed project belongs to its authors. SkillHub only links to it.</p>
       </div>

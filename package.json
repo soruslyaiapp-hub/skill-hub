@@ -14,10 +14,13 @@
     "new-skill": "tsx scripts/new-skill.ts",
     "sync:github": "tsx scripts/sync-github.ts",
     "import": "tsx scripts/import-skills.ts",
-    "check:links": "tsx scripts/check-links.ts"
+    "check:links": "tsx scripts/check-links.ts",
+    "digest": "tsx scripts/digest.ts",
+    "linkedin": "tsx scripts/linkedin-post.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
+    "@supabase/supabase-js": "^2.116.0",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.3.0",
     "fuse.js": "^7.5.0",

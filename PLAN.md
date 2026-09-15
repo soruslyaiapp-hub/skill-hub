@@ -3,7 +3,7 @@
 > An open, searchable directory of AI skills, agents, MCP servers and prompts.
 > Think "Hugging Face, but for skills instead of models."
 
-- **Status:** In progress — Phase 5 done
+- **Status:** Built — phases 0 to 6 done. Waiting on Ahmed: name and domain, GitHub push, Vercel deploy, optional Supabase.
 - **Owner:** Ahmed
 - **Created:** 2026-09-02
 - **Last updated:** 2026-09-15
@@ -291,13 +291,16 @@ Each phase ends with something you can show people.
 
 ### Phase 6 — Growth (ongoing)
 
-- [ ] `/api/skills.json` and `/rss.xml`
-- [ ] Collections and "Skill of the week"
-- [ ] Newsletter capture plus a weekly digest
-- [ ] Compare view: two skills side by side
-- [ ] Bookmarks in `localStorage`
-- [ ] Upvotes with Supabase and GitHub login
-- [ ] A `skillhub` CLI: `npx skillhub add <slug>`
+- [x] `/api/skills.json` (open to other sites) and `/rss.xml` (newest 50)
+- [x] 6 collections, and a "Skill of the week" that rotates through featured skills
+- [x] Newsletter signup (off until `NEXT_PUBLIC_NEWSLETTER_ACTION` is set) and `npm run digest` for the weekly email
+- [x] Compare view: two skills side by side, picks kept in the link
+- [x] Bookmarks in `localStorage` (Save button, /bookmarks page)
+- [x] Upvotes with Supabase and GitHub login: code and SQL ready, off until the Supabase project exists
+- [ ] Create the Supabase project and run the SQL — needs Ahmed's OK (it changes a real database)
+- [x] A `skillhub` CLI in `packages/cli` (search, info, add with a yes/no check)
+- [ ] Publish the CLI to npm — needs Ahmed's OK (it is public)
+- [x] `npm run linkedin -- <slug>`: a LinkedIn post draft that links back to the page (idea from section 8)
 
 ---
 
@@ -389,10 +392,10 @@ Check the trademark and the domain before you commit to a name.
 ## 12. Open decisions
 
 - [ ] **D1 — Name and domain.** This blocks Phase 0.
-- [ ] **D2 — Content in Git files, or in Supabase?**
+- [x] **D2 — Content in Git files, or in Supabase?** Decided: Git files.
       Recommendation: **Git files.** Free, reviewable, and it fits your workflow.
       Move to a database only if non-technical people must add skills by form.
-- [ ] **D3 — Size of the seed set.** 30 skills is the suggested launch bar.
+- [x] **D3 — Size of the seed set.** Done: 47 skills.
 
 ---
 
@@ -407,3 +410,4 @@ Check the trademark and the domain before you commit to a name.
 | 2026-09-15 | 3 | 47 real skills across all 12 categories. GitHub stats filled by the new sync script. |
 | 2026-09-15 | 4 | OG images, sitemap, robots, JSON-LD, 404, skeletons, analytics hook, LinkedIn share. Lighthouse 100 on accessibility, best practices and SEO. |
 | 2026-09-15 | 5 | Submit form to PR, about page, CI, nightly stats, weekly link check, CONTRIBUTING, templates, full README. All 92 links OK. |
+| 2026-09-15 | 6 | JSON API, RSS, collections, skill of the week, compare, bookmarks, newsletter, upvotes (off), CLI, digest and LinkedIn scripts. 63+ tests. |

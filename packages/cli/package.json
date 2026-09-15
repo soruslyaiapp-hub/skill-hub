@@ -1,0 +1,10 @@
+{
+  "name": "skillhub-cli",
+  "version": "0.1.0",
+  "description": "Search SkillHub and install AI skills from your terminal.",
+  "type": "module",
+  "bin": { "skillhub": "bin/skillhub.mjs" },
+  "files": ["bin", "README.md"],
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}

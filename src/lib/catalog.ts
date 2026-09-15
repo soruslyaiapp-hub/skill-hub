@@ -38,3 +38,8 @@ export function getRelated(skill: Skill, limit = 3, now: Date = new Date()): Ski
     .slice(0, limit)
     .map((entry) => toSummary(entry.other, now));
 }
+
+/** The distinct categories of a list of skill slugs, in list order. */
+export function categoriesOf(slugs: string[], bySlug: Map<string, SkillSummary>): CategoryKey[] {
+  return [...new Set(slugs.flatMap((slug) => bySlug.get(slug)?.category ?? []))];
+}

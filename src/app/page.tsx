@@ -2,12 +2,17 @@ import { Search } from "lucide-react";
 import Form from "next/form";
 import Link from "next/link";
 import { CategoryCard } from "@/components/category-card";
+import { CollectionCard } from "@/components/collection-card";
 import { Container } from "@/components/container";
 import { JsonLd } from "@/components/json-ld";
+import { NewsletterSignup } from "@/components/newsletter-signup";
 import { SectionHeader } from "@/components/section-header";
 import { SkillGrid } from "@/components/skill-grid";
+import { SkillSpotlight } from "@/components/skill-spotlight";
 import { buttonVariants } from "@/components/ui/button";
-import { countByCategory, getSummaries } from "@/lib/catalog";
+import { categoriesOf, countByCategory, getSummaries } from "@/lib/catalog";
+import { getAllCollections } from "@/lib/content/collections";
+import { skillOfTheWeek } from "@/lib/spotlight";
 import { websiteJsonLd } from "@/lib/structured-data";
 import { CATEGORIES, categoryList } from "@/lib/taxonomy";
 import { cn } from "@/lib/utils";
@@ -17,6 +22,9 @@ const POPULAR = ["token-cost", "coding", "media", "agent-optimization"] as const
 export default function HomePage() {
   const skills = getSummaries();
   const counts = countByCategory(skills);
+  const spotlight = skillOfTheWeek(skills, new Date());
+  const collections = getAllCollections().slice(0, 3);
+  const bySlug = new Map(skills.map((s) => [s.slug, s]));
 
   return (
     <>
@@ -61,6 +69,12 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {spotlight ? (
+        <Container className="pt-14">
+          <SkillSpotlight skill={spotlight.skill} week={spotlight.week} />
+        </Container>
+      ) : null}
+
       <Container className="py-14">
         <SectionHeader title="Browse by category" href="/categories" linkLabel="All categories" />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -70,9 +84,22 @@ export default function HomePage() {
         </div>
       </Container>
 
+      <Container className="pb-14">
+        <SectionHeader title="Collections" description="Hand-picked stacks that work well together." href="/collections" linkLabel="All collections" />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {collections.map((c) => (
+            <CollectionCard key={c.slug} collection={c} categories={categoriesOf(c.skills, bySlug)} />
+          ))}
+        </div>
+      </Container>
+
       <Container className="pb-6">
         <SectionHeader title="Recently added" href="/skills" linkLabel="Browse all" />
         <SkillGrid skills={skills.slice(0, 6)} />
+      </Container>
+
+      <Container className="pb-6 pt-14">
+        <NewsletterSignup />
       </Container>
     </>
   );

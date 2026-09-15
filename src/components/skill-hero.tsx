@@ -1,4 +1,4 @@
-import { AlertTriangle, ArrowUpRight, BookOpen, ChevronRight, PencilLine, Star } from "lucide-react";
+import { AlertTriangle, ArrowLeftRight, ArrowUpRight, BookOpen, ChevronRight, PencilLine, Star } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import type { Skill } from "@/lib/content/parse";
@@ -8,10 +8,12 @@ import { linkedInShareUrl } from "@/lib/share";
 import type { SkillSummary } from "@/lib/summary";
 import { CATEGORIES } from "@/lib/taxonomy";
 import { CategoryTile, hueStyle } from "./category-icon";
+import { BookmarkButton } from "./bookmark-button";
 import { CopyButton } from "./copy-button";
 import { FreshnessDot } from "./freshness-dot";
 import { LinkedInIcon } from "./icons";
 import { StatusBadge } from "./status-badge";
+import { UpvoteButton } from "./upvote-button";
 
 const EXTERNAL = { target: "_blank", rel: "noopener noreferrer" } as const;
 
@@ -80,11 +82,17 @@ export function SkillHero({ skill, summary, pageUrl, editUrl }: Props) {
                   Docs
                 </a>
               ) : null}
+              <UpvoteButton slug={skill.slug} />
+              <BookmarkButton slug={skill.slug} />
               <a href={linkedInShareUrl(pageUrl)} {...EXTERNAL} className={buttonVariants({ variant: "outline", size: "lg" })}>
                 <LinkedInIcon data-icon="inline-start" className="size-4 text-[#0A66C2] dark:text-[#70B5F9]" />
                 Share
               </a>
               <CopyButton value={pageUrl} label="Copy link to this skill" />
+              <Link href={`/compare?a=${skill.slug}`} className={buttonVariants({ variant: "ghost", size: "lg" })}>
+                <ArrowLeftRight data-icon="inline-start" />
+                Compare
+              </Link>
               {editUrl ? (
                 <a href={editUrl} {...EXTERNAL} className={buttonVariants({ variant: "ghost", size: "lg" })}>
                   <PencilLine data-icon="inline-start" />
