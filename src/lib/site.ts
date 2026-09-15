@@ -8,7 +8,7 @@ function resolveSiteUrl(): string {
   return "http://localhost:3000";
 }
 
-const repo = process.env.NEXT_PUBLIC_GITHUB_REPO ?? "mansoorahmed084/skill-hub";
+const repo = process.env.NEXT_PUBLIC_GITHUB_REPO ?? "soruslyaiapp-hub/skill-hub";
 
 export const site = {
   name: "SkillHub",

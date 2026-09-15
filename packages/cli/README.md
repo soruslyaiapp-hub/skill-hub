@@ -10,6 +10,6 @@ node packages/cli/bin/skillhub.mjs add repomix
 
 `add` prints the install command and runs it only after you type `y`. Nothing runs when the input is not a terminal.
 
-Set `SKILLHUB_API` to your site, for example `https://your-domain.com/api/skills.json`. The default is `http://localhost:3000/api/skills.json`.
+The default data source is the live site, `https://skill-hub-teal.vercel.app/api/skills.json`. Set `SKILLHUB_API` to use another copy, for example `http://localhost:3000/api/skills.json` while you develop.
 
 After you publish it to npm, it also works as `npx skillhub-cli search token`.

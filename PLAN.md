@@ -227,7 +227,8 @@ Each phase ends with something you can show people.
 - [x] Working name: **SkillHub** (rename in one place: `src/lib/site.ts`)
 - [ ] Buy the domain (see D1)
 - [x] `git init` and MIT licence
-- [x] Pushed to https://github.com/mansoorahmed084/skill-hub (public). CI passes.
+- [x] Pushed to GitHub, now at https://github.com/soruslyaiapp-hub/skill-hub (public). CI passes.
+- [x] Deployed on Vercel (project `skill-hub` in Verbalyft's projects). Production build is Ready.
 - [x] `create-next-app`: Next.js 16.3, React 19.2, TypeScript, Tailwind v4
 - [x] Add shadcn/ui (Base UI flavour), Lucide, Zod, Vitest
 - [ ] Connect the repo to Vercel, confirm the first deploy — needs Ahmed's OK
