@@ -17,7 +17,7 @@ links:
   source: https://github.com/thedotmack/claude-mem
   install: npx claude-mem install
 metrics:
-  githubStars: 94007
+  githubStars: 94081
   lastCommit: 2026-09-16
   license: Apache-2.0
   archived: false
