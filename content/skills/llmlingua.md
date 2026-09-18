@@ -17,7 +17,7 @@ links:
   source: https://github.com/microsoft/LLMLingua
   install: pip install llmlingua
 metrics:
-  githubStars: 6672
+  githubStars: 6678
   lastCommit: 2026-09-10
   license: MIT
   archived: false
