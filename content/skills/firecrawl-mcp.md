@@ -17,7 +17,7 @@ links:
   source: https://github.com/firecrawl/firecrawl-mcp-server
   install: env FIRECRAWL_API_KEY=fc-YOUR_API_KEY npx -y firecrawl-mcp
 metrics:
-  githubStars: 7478
+  githubStars: 7486
   lastCommit: 2026-09-18
   license: MIT
   archived: false
