@@ -17,8 +17,8 @@ links:
   source: https://github.com/ccusage/ccusage
   install: npx ccusage@latest
 metrics:
-  githubStars: 18624
-  lastCommit: 2026-09-19
+  githubStars: 18642
+  lastCommit: 2026-09-20
   license: NOASSERTION
   archived: false
 addedAt: 2026-09-15

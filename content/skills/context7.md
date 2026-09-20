@@ -17,8 +17,8 @@ links:
   source: https://github.com/upstash/context7
   install: npx ctx7 setup
 metrics:
-  githubStars: 62187
-  lastCommit: 2026-09-18
+  githubStars: 62226
+  lastCommit: 2026-09-20
   license: MIT
   archived: false
 addedAt: 2026-09-15
