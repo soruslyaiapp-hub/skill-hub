@@ -20,7 +20,7 @@ origin:
   postedAt: 2026-08-07
 metrics:
   githubStars: 1578
-  lastCommit: 2026-09-19
+  lastCommit: 2026-09-22
   license: Apache-2.0
   archived: false
 addedAt: 2026-09-15

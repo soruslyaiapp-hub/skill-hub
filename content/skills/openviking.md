@@ -20,8 +20,8 @@ origin:
   linkedinUrl: https://www.linkedin.com/feed/update/urn:li:share:7496898991436251136/
   postedAt: 2026-08-22
 metrics:
-  githubStars: 38273
-  lastCommit: 2026-09-21
+  githubStars: 38388
+  lastCommit: 2026-09-22
   license: AGPL-3.0
   archived: false
 addedAt: 2026-09-15
