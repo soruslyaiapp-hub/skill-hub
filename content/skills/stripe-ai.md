@@ -18,7 +18,7 @@ links:
   docs: https://docs.stripe.com
 metrics:
   githubStars: 1829
-  lastCommit: 2026-09-22
+  lastCommit: 2026-09-23
   license: MIT
   archived: false
 addedAt: 2026-09-15

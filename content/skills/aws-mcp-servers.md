@@ -17,7 +17,7 @@ links:
   source: https://github.com/awslabs/mcp
   install: claude mcp add aws-docs uvx awslabs.aws-documentation-mcp-server@latest
 metrics:
-  githubStars: 9719
+  githubStars: 9724
   lastCommit: 2026-09-22
   license: Apache-2.0
   archived: false
