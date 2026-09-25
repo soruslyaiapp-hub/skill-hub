@@ -17,8 +17,8 @@ links:
   source: https://github.com/anthropics/skills/tree/main/skills/mcp-builder
   install: /plugin marketplace add anthropics/skills
 metrics:
-  githubStars: 177872
-  lastCommit: 2026-09-22
+  githubStars: 178035
+  lastCommit: 2026-09-24
   archived: false
 addedAt: 2026-09-15
 updatedAt: 2026-09-15
