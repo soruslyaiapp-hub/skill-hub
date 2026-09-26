@@ -17,8 +17,8 @@ links:
   source: https://github.com/assafelovic/gpt-researcher
   install: pip install gpt-researcher
 metrics:
-  githubStars: 29614
-  lastCommit: 2026-08-27
+  githubStars: 29628
+  lastCommit: 2026-09-26
   license: Apache-2.0
   archived: false
 addedAt: 2026-09-15
