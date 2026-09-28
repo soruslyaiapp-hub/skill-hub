@@ -17,7 +17,7 @@ links:
   source: https://github.com/makenotion/notion-mcp-server
   install: npx @notionhq/notion-mcp-server
 metrics:
-  githubStars: 4647
+  githubStars: 4649
   lastCommit: 2026-09-20
   license: MIT
   archived: false
