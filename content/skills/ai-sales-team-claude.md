@@ -17,7 +17,7 @@ links:
   source: https://github.com/zubair-trabzada/ai-sales-team-claude
   install: curl -fsSL https://raw.githubusercontent.com/zubair-trabzada/ai-sales-team-claude/main/install.sh | bash
 metrics:
-  githubStars: 1387
+  githubStars: 1391
   lastCommit: 2026-03-27
   license: MIT
   archived: false
