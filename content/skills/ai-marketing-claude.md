@@ -17,7 +17,7 @@ links:
   source: https://github.com/zubair-trabzada/ai-marketing-claude
   install: curl -fsSL https://raw.githubusercontent.com/zubair-trabzada/ai-marketing-claude/main/install.sh | bash
 metrics:
-  githubStars: 2701
+  githubStars: 2708
   lastCommit: 2026-03-02
   license: MIT
   archived: false
