@@ -18,7 +18,7 @@ links:
   docs: https://modelcontextprotocol.io
   install: npx -y @modelcontextprotocol/server-memory
 metrics:
-  githubStars: 91011
+  githubStars: 91035
   lastCommit: 2026-10-05
   license: NOASSERTION
   archived: false
