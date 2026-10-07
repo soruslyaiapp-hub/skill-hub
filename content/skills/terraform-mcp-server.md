@@ -18,7 +18,7 @@ links:
   install: claude mcp add terraform -s user -t stdio -- docker run -i --rm hashicorp/terraform-mcp-server
 metrics:
   githubStars: 1544
-  lastCommit: 2026-10-05
+  lastCommit: 2026-10-07
   license: MPL-2.0
   archived: false
 addedAt: 2026-09-15
