@@ -21,7 +21,7 @@ origin:
   postedAt: 2026-08-08
 metrics:
   githubStars: 35754
-  lastCommit: 2026-10-09
+  lastCommit: 2026-10-10
   license: MIT
   archived: false
 addedAt: 2026-09-15

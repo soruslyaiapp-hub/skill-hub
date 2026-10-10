@@ -18,7 +18,7 @@ links:
   docs: https://www.remotion.dev
   install: npx skills add remotion-dev/skills
 metrics:
-  githubStars: 4938
+  githubStars: 4988
   lastCommit: 2026-10-07
   archived: false
 addedAt: 2026-09-15
