@@ -18,7 +18,7 @@ links:
   install: npx @sentry/mcp-server@latest --access-token=YOUR_SENTRY_TOKEN
 metrics:
   githubStars: 928
-  lastCommit: 2026-10-12
+  lastCommit: 2026-10-14
   license: NOASSERTION
   archived: false
 addedAt: 2026-09-15

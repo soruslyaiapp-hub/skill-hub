@@ -17,7 +17,7 @@ links:
   source: https://github.com/containers/kubernetes-mcp-server
   install: npx kubernetes-mcp-server@latest
 metrics:
-  githubStars: 2157
+  githubStars: 2160
   lastCommit: 2026-10-13
   license: Apache-2.0
   archived: false
