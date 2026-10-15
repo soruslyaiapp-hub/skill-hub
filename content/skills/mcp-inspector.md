@@ -17,7 +17,7 @@ links:
   source: https://github.com/modelcontextprotocol/inspector
   install: npx @modelcontextprotocol/inspector
 metrics:
-  githubStars: 11071
+  githubStars: 11081
   lastCommit: 2026-10-14
   license: NOASSERTION
   archived: false
