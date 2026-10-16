@@ -16,8 +16,8 @@ author:
 links:
   source: https://github.com/github/github-mcp-server
 metrics:
-  githubStars: 33627
-  lastCommit: 2026-10-14
+  githubStars: 33658
+  lastCommit: 2026-10-15
   license: MIT
   archived: false
 addedAt: 2026-09-15
