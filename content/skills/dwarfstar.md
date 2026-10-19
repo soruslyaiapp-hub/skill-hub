@@ -19,8 +19,8 @@ origin:
   linkedinUrl: https://www.linkedin.com/feed/update/urn:li:share:7490719267852611585/
   postedAt: 2026-08-05
 metrics:
-  githubStars: 23913
-  lastCommit: 2026-10-08
+  githubStars: 23937
+  lastCommit: 2026-10-19
   license: MIT
   archived: false
 addedAt: 2026-09-15
