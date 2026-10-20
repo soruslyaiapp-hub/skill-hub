@@ -17,8 +17,8 @@ links:
   source: https://github.com/obra/superpowers
   install: /plugin install superpowers@claude-plugins-official
 metrics:
-  githubStars: 301812
-  lastCommit: 2026-10-10
+  githubStars: 302305
+  lastCommit: 2026-10-20
   license: MIT
   archived: false
 addedAt: 2026-09-15
