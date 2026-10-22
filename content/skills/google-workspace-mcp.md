@@ -17,8 +17,8 @@ links:
   source: https://github.com/taylorwilsdon/google_workspace_mcp
   install: uvx workspace-mcp --tool-tier core
 metrics:
-  githubStars: 3386
-  lastCommit: 2026-10-20
+  githubStars: 3396
+  lastCommit: 2026-10-22
   license: MIT
   archived: false
 addedAt: 2026-09-15

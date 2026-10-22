@@ -17,8 +17,8 @@ links:
   source: https://github.com/microsoft/markitdown
   install: pip install 'markitdown[all]'
 metrics:
-  githubStars: 191378
-  lastCommit: 2026-10-20
+  githubStars: 191555
+  lastCommit: 2026-10-21
   license: MIT
   archived: false
 addedAt: 2026-09-15
