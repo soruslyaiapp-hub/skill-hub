@@ -17,8 +17,8 @@ links:
   source: https://github.com/stripe/ai
   docs: https://docs.stripe.com
 metrics:
-  githubStars: 1966
-  lastCommit: 2026-10-24
+  githubStars: 1967
+  lastCommit: 2026-10-25
   license: MIT
   archived: false
 addedAt: 2026-09-15
