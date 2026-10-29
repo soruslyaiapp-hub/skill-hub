@@ -17,8 +17,8 @@ links:
   source: https://github.com/yamadashy/repomix
   install: npx repomix@latest
 metrics:
-  githubStars: 29052
-  lastCommit: 2026-10-25
+  githubStars: 29064
+  lastCommit: 2026-10-28
   license: MIT
   archived: false
 addedAt: 2026-09-15
