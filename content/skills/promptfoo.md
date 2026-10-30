@@ -18,8 +18,8 @@ links:
   docs: https://www.promptfoo.dev
   install: npx promptfoo@latest init
 metrics:
-  githubStars: 26579
-  lastCommit: 2026-10-29
+  githubStars: 26615
+  lastCommit: 2026-10-30
   license: MIT
   archived: false
 addedAt: 2026-09-15

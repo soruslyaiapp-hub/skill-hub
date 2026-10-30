@@ -18,7 +18,7 @@ links:
   install: npx @notionhq/notion-mcp-server
 metrics:
   githubStars: 4686
-  lastCommit: 2026-10-28
+  lastCommit: 2026-10-29
   license: MIT
   archived: false
 addedAt: 2026-09-15
