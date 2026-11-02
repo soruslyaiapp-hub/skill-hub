@@ -2,7 +2,7 @@
 
 The open directory of AI skills, agents, MCP servers and tools, sorted by the job they do.
 
-**Live site: https://skillcurio.dev** · made by Sorusly AI Labs
+**Live site: https://skillcurio.dev** · made by AxiomAITech.dev
 
 Good skills get shared on LinkedIn and then sink in the feed. SkillCurio keeps them. Every entry gets a permanent, searchable page with a plain-English write-up, the install command and a link to the source.
 

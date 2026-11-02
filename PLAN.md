@@ -3,10 +3,10 @@
 > An open, searchable directory of AI skills, agents, MCP servers and prompts.
 > Think "Hugging Face, but for skills instead of models."
 
-- **Status:** Renamed to SkillCurio, by Sorusly AI Labs. Moving to https://skillcurio.dev (bought 2026-09-16); still live at https://skill-hub-teal.vercel.app. 90 skills. Waiting on Ahmed: mark tested skills verified, optional Supabase.
+- **Status:** Renamed to SkillCurio, by AxiomAITech.dev. Moving to https://skillcurio.dev (bought 2026-09-16); still live at https://skill-hub-teal.vercel.app. 90 skills. Waiting on Ahmed: mark tested skills verified, optional Supabase.
 - **Owner:** Ahmed
 - **Created:** 2026-09-02
-- **Last updated:** 2026-09-15
+- **Last updated:** 2026-11-02
 
 ---
 
@@ -418,3 +418,4 @@ Check the trademark and the domain before you commit to a name.
 | 2026-09-15 | Launch | Repo pushed to GitHub (now soruslyaiapp-hub/skill-hub); CI green; deployed on Vercel at https://skill-hub-teal.vercel.app. |
 | 2026-09-15 | Content | Added 43 skills from Ahmed's LinkedIn posts and linked 3 existing ones (46 in total point to their post). New types: Model and Learning resource. 90 skills. AI-news posts were left out. |
 | 2026-09-16 | Brand | Renamed to SkillCurio (by Sorusly AI Labs). Domain skillcurio.dev bought; DNS and Vercel setup next. |
+| 2026-11-02 | Brand | Maker credit changed from Sorusly AI Labs to AxiomAITech.dev (footer, About page, README). |

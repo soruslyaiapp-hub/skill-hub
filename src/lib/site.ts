@@ -13,7 +13,7 @@ const repo = process.env.NEXT_PUBLIC_GITHUB_REPO?.trim() || "soruslyaiapp-hub/sk
 
 export const site = {
   name: "SkillCurio",
-  maker: "Sorusly AI Labs",
+  maker: "AxiomAITech.dev",
   tagline: "The open directory of AI skills, agents and MCP servers.",
   description:
     "Find, compare and install AI skills, agents, MCP servers and prompts — sorted by the job they do.",

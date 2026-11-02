@@ -54,7 +54,7 @@ export default function AboutPage() {
           Every entry is available as JSON at <a href="/api/skills.json">/api/skills.json</a> and as an <a href="/rss.xml">RSS feed</a>. Build on it, and link back.
         </p>
         <h2>Licence</h2>
-        <p>SkillCurio is made by Sorusly AI Labs. The code is MIT licensed. Each listed project belongs to its authors. SkillCurio only links to it.</p>
+        <p>SkillCurio is made by AxiomAITech.dev. The code is MIT licensed. Each listed project belongs to its authors. SkillCurio only links to it.</p>
       </div>
     </Container>
   );
