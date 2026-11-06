@@ -17,8 +17,8 @@ links:
   source: https://github.com/affaan-m/ECC
   install: npx ecc-universal setup
 metrics:
-  githubStars: 297515
-  lastCommit: 2026-11-02
+  githubStars: 298169
+  lastCommit: 2026-11-06
   license: MIT
   archived: false
 addedAt: 2026-09-15
