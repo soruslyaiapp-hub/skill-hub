@@ -18,8 +18,8 @@ links:
   docs: https://playwright.dev
   install: claude mcp add playwright npx @playwright/mcp@latest
 metrics:
-  githubStars: 39254
-  lastCommit: 2026-11-05
+  githubStars: 39290
+  lastCommit: 2026-11-06
   license: Apache-2.0
   archived: false
 addedAt: 2026-09-15

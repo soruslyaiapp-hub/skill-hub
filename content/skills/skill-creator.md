@@ -18,8 +18,8 @@ links:
   docs: https://support.claude.com/en/articles/12512198-creating-custom-skills
   install: /plugin marketplace add anthropics/skills
 metrics:
-  githubStars: 187954
-  lastCommit: 2026-10-28
+  githubStars: 188309
+  lastCommit: 2026-11-06
   archived: false
 addedAt: 2026-09-15
 updatedAt: 2026-09-15
