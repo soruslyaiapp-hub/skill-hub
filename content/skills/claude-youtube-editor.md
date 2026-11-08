@@ -17,7 +17,7 @@ links:
   source: https://github.com/hassancs91/claude-youtube-editor
   install: git clone https://github.com/hassancs91/claude-youtube-editor
 metrics:
-  githubStars: 368
+  githubStars: 369
   lastCommit: 2026-11-05
   license: MIT
   archived: false
