@@ -18,8 +18,8 @@ links:
   docs: https://dspy.ai
   install: pip install dspy
 metrics:
-  githubStars: 38983
-  lastCommit: 2026-11-08
+  githubStars: 38991
+  lastCommit: 2026-11-10
   license: MIT
   archived: false
 addedAt: 2026-09-15

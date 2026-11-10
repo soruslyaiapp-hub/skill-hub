@@ -17,8 +17,8 @@ links:
   source: https://github.com/ruvnet/ruflo
   install: npx ruflo init
 metrics:
-  githubStars: 81320
-  lastCommit: 2026-11-09
+  githubStars: 81396
+  lastCommit: 2026-11-10
   license: MIT
   archived: false
 addedAt: 2026-09-15

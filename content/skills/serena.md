@@ -16,8 +16,8 @@ author:
 links:
   source: https://github.com/oraios/serena
 metrics:
-  githubStars: 31227
-  lastCommit: 2026-10-28
+  githubStars: 31258
+  lastCommit: 2026-11-09
   license: NOASSERTION
   archived: false
 addedAt: 2026-09-15
