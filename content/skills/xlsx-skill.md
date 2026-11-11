@@ -17,7 +17,7 @@ links:
   source: https://github.com/anthropics/skills/tree/main/skills/xlsx
   install: /plugin marketplace add anthropics/skills
 metrics:
-  githubStars: 191731
+  githubStars: 192784
   lastCommit: 2026-11-06
   archived: false
 addedAt: 2026-09-15
