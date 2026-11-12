@@ -17,8 +17,8 @@ links:
   source: https://github.com/browser-use/browser-use
   install: pip install browser-use
 metrics:
-  githubStars: 120670
-  lastCommit: 2026-11-11
+  githubStars: 120806
+  lastCommit: 2026-11-12
   license: MIT
   archived: false
 addedAt: 2026-09-15
