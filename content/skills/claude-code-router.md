@@ -17,7 +17,7 @@ links:
   source: https://github.com/musistudio/claude-code-router
   install: npm install -g @musistudio/claude-code-router
 metrics:
-  githubStars: 38135
+  githubStars: 38148
   lastCommit: 2026-10-10
   license: MIT
   archived: false
