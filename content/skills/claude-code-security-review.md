@@ -16,7 +16,7 @@ author:
 links:
   source: https://github.com/anthropics/claude-code-security-review
 metrics:
-  githubStars: 7088
+  githubStars: 7122
   lastCommit: 2026-02-11
   license: MIT
   archived: false

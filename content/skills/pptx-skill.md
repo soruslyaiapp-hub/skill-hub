@@ -17,7 +17,7 @@ links:
   source: https://github.com/anthropics/skills/tree/main/skills/pptx
   install: /plugin marketplace add anthropics/skills
 metrics:
-  githubStars: 200266
+  githubStars: 200795
   lastCommit: 2026-11-16
   archived: false
 addedAt: 2026-09-15
