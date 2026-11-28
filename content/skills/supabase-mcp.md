@@ -16,8 +16,8 @@ author:
 links:
   source: https://github.com/supabase/mcp
 metrics:
-  githubStars: 3023
-  lastCommit: 2026-11-27
+  githubStars: 3026
+  lastCommit: 2026-11-28
   license: Apache-2.0
   archived: false
 addedAt: 2026-09-15

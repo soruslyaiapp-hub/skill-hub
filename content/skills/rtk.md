@@ -17,8 +17,8 @@ links:
   source: https://github.com/rtk-ai/rtk
   install: brew install rtk
 metrics:
-  githubStars: 88010
-  lastCommit: 2026-11-27
+  githubStars: 88083
+  lastCommit: 2026-11-28
   license: Apache-2.0
   archived: false
 addedAt: 2026-09-15
